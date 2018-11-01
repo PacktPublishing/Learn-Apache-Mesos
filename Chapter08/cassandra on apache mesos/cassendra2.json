@@ -1,0 +1,50 @@
+{
+  "id": "/cassandra2",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 8000,
+  "disk": 0,
+  "instances": 0,
+  "constraints": [
+    [
+      "hostname",
+      "UNIQUE"
+    ]
+  ],
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "forcePullImage": true,
+      "image": "cassandra",
+      "parameters": [
+        {
+          "key": "env",
+          "value": "CASSANDRA_CLUSTERNAME=cassandra-cluster"
+        },
+        {
+          "key": "env",
+          "value": "CASSANDRA_SEEDS=10.0.1.85,10.0.1.174,10.0.1.203"
+        },
+        {
+          "key": "volume-driver",
+          "value": "rexray/ebs"
+        },
+        {
+          "key": "volume",
+          "value": "data2:/var/lib/cassandra"
+        }
+      ],
+      "privileged": true
+    },
+    "volumes": []
+  },
+  "portDefinitions": [
+    {
+      "port": 10000,
+      "protocol": "tcp"
+    }
+  ]
+}

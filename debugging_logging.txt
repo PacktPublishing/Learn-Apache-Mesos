@@ -1,0 +1,4 @@
+mesos ps --master=zk://mesos-master3:2181/mesos
+mesos resolve zk://mesos-master3:2181/mesos
+mesos execute --command="echo 'Hello, Mesos'" --name=HelloMesos --master=$(mesos resolve zk://mesos-master1:2181/mesos)
+mesos cat --master=$(mesos resolve zk://mesos-master3:2181/mesos) --framework=bb92f0dd-79de-46ca-8c49-fc22f4aa4392-0001 --task=HelloMesos --file=stdout

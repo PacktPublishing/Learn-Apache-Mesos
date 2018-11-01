@@ -1,0 +1,5 @@
+curl -X POST http://marathon1:8080/v2/apps -d @cassendra1.json -H "Content-type: application/json"
+curl -X POST http://marathon1:8080/v2/apps -d @cassendra2.json -H "Content-type: application/json"
+sudo docker exec -it ccf37a8f5e80 cqlsh
+create keyspace devtest with replication = {'class':'SimpleStrategy','replication_factor':1};
+describe keyspace 

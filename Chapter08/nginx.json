@@ -1,0 +1,37 @@
+{
+  "id": "web",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "nginx",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "containerPort": 80,
+          "servicePort": 10000
+        }
+      ],
+      "forcePullImage": true
+    }
+  },
+  "instances": 4,
+  "cpus": 0.1,
+  "mem": 65,
+  "healthChecks": [
+    {
+      "protocol": "MESOS_HTTP",
+      "path": "/",
+      "portIndex": 0,
+      "timeoutSeconds": 15,
+      "gracePeriodSeconds": 15,
+      "intervalSeconds": 3,
+      "maxConsecutiveFailures": 10
+    }
+  ],
+  "labels": {
+    "HAPROXY_DEPLOYMENT_GROUP": "web",
+    "HAPROXY_DEPLOYMENT_ALT_PORT": "10001",
+    "HAPROXY_GROUP": "external"
+  }
+}

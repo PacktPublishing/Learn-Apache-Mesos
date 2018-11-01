@@ -1,0 +1,11 @@
+l99999999999999999999999999997
+sudo docker run -d -p 9090:9090 -p 8081:10001 --add-host="mesos-slave1:10.0.1.85" --add-host="mesos-slave2:10.0.1.174" --add-host="mesos-slave3:10.0.2.141" --add-host="mesos-master1:10.0.1.42" --add-host="mesos-master2:10.0.1.203" --add-host="mesos-master3:10.0.2.68" -e PORTS=9090Â  mesosphere/marathon-lb sse --marathon http://10.0.1.191:8080 http://10.0.2.162:8080 --group external
+yum install -y python36 python36-devel git gcc openssl-devel libcurl-devel
+sudo yum install epel-release
+sudo yum install python-pip
+sudo pip install --upgrade pip
+sudo pip install pycurl --global-option="--with-nss"
+git clone https://github.com/mesosphere/marathon-lb.git
+./marathon-lb/zdd.py -j nginx.json -m http://MarthonIP:8080 -f -l http://Marathon-lb:9090 --syslog-socket /dev/null
+./marathon-lb/zdd.py -j nginx.json -m http://10.0.1.191:8080 -f -l http://10.0.1.191:9090 --syslog-socket /dev/null --new-instances 2
+./marathon-lb/zdd.py -j nginx.json -m http://Marathonip:8080 -f -l http://Marathon-lb:9090 --syslog-socket /dev/null --complete-cur
