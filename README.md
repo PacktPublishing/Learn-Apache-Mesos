@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this Book for only $ 5 on PacktPub.com](https://www.packtpub.com/product/learn-apache-mesos/9781789137385)
+-----
+*If you have used this book then please consider providing feedback via an [Amazon.com review](https://www.amazon.com/gp/product/1789137381). It is a helpful feedback to improve the quality of the title. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021__*
+
 # Learn-Apache-Mesos
 
 <a href="https://www.packtpub.com/big-data-and-business-intelligence/learn-apache-mesos?utm_source=github&utm_medium=repository&utm_campaign=9781789137385"><img src="https://www.packtpub.com/sites/default/files/B10691.png" alt="Learn Apache Mesos" height="256px" align="right"></a>
