@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B10691?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # Learn-Apache-Mesos
 
 <a href="https://www.packtpub.com/big-data-and-business-intelligence/learn-apache-mesos?utm_source=github&utm_medium=repository&utm_campaign=9781789137385"><img src="https://www.packtpub.com/sites/default/files/B10691.png" alt="Learn Apache Mesos" height="256px" align="right"></a>
